@@ -1,12 +1,6 @@
-fileData = open("input.txt", "r")
-for line in fileData.readlines():
-    counter = 0
-    for position, character in enumerate(line):
-        if character == "(":
-            counter += 1
-        else:
-            counter -= 1
-        if counter == -1:
-            print("Santa first entered the basement at position",
-                  f"{position + 1}")
-            break
+counter, instructions = 0, open("input.txt", "r").readline()
+for position, character in enumerate(instructions):
+    counter += 1 if character == "(" else -1
+    if counter == -1:
+        print(f"Santa first entered the basement at position {position + 1}")
+        break
