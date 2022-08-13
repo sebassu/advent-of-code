@@ -1,6 +1,6 @@
 from hashlib import md5
+from itertools import count
 from argparse import ArgumentParser
-from itertools import takewhile, count
 
 argumentParser = ArgumentParser()
 argumentParser.add_argument("-z", "--zeroesCount", type=int, default=5,
